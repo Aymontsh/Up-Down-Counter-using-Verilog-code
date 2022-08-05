@@ -1,0 +1,35 @@
+# vsim work.Up_Dn_Counter 
+# Start time: 22:13:14 on Aug 02,2022
+# Loading work.Up_Dn_Counter
+add wave -position end  sim:/Up_Dn_Counter/IN
+add wave -position end  sim:/Up_Dn_Counter/Load
+add wave -position end  sim:/Up_Dn_Counter/Up
+add wave -position end  sim:/Up_Dn_Counter/Down
+add wave -position end  sim:/Up_Dn_Counter/CLK
+add wave -position end  sim:/Up_Dn_Counter/High
+add wave -position end  sim:/Up_Dn_Counter/Counter
+add wave -position end  sim:/Up_Dn_Counter/Low
+add wave -position end  sim:/Up_Dn_Counter/Counter_value
+force -freeze sim:/Up_Dn_Counter/IN 11101 0
+force -freeze sim:/Up_Dn_Counter/Load 1 0
+force -freeze sim:/Up_Dn_Counter/Up 0 0
+force -freeze sim:/Up_Dn_Counter/Down 0\\ 0
+# Invalid binary digit: \.
+# ** Error: (vsim-4011) Invalid force value: 0\\ 0.
+# 
+force -freeze sim:/Up_Dn_Counter/Down 0 0
+force -freeze sim:/Up_Dn_Counter/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/Up_Dn_Counter/CLK 1 0, 0 {50 ps} -r 100
+run
+run
+force -freeze sim:/Up_Dn_Counter/Load 0 0
+force -freeze sim:/Up_Dn_Counter/Up 1 0
+run
+run
+run
+run
+run
+force -freeze sim:/Up_Dn_Counter/Down 1 0
+run -all
+# End time: 22:47:12 on Aug 02,2022, Elapsed time: 0:33:58
+# Errors: 1, Warnings: 0
